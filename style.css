@@ -1,0 +1,384 @@
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: white;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00f5ff;
+}
+
+/* Hamburger */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 80px 10%;
+    scroll-margin-top: 100px;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    border-left: 4px solid #9f00ff;
+    padding-left: 15px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    padding: 120px 10%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Left Side */
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-left h3 {
+    height: 40px; /* Prevents layout shift */
+    margin-top: 10px;
+}
+
+.hero-left p {
+    margin-top: 20px;
+    max-width: 500px;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/* Role Fade Animation */
+
+.typing {
+    display: inline-block;
+    min-width: 180px;
+    font-weight: bold;
+    color: #00f5ff;
+    transition: opacity 0.4s ease;
+}
+
+/* Resume Button */
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #00f5ff, #9f00ff);
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+}
+
+/* Right Side Image */
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    background: linear-gradient(#0b0f19, #0b0f19) padding-box,
+                linear-gradient(135deg, #00f5ff, #9f00ff) border-box;
+    transition: 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(159, 0, 255, 0.7);
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #151c2c;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.4s;
+    border: 1px solid #1f2937;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00f5ff;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #151c2c;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.tech-tags {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tags span {
+    background: #132c1a;
+    color: #14f7ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #273d1f;
+    transition: 0.3s ease;
+}
+
+.tech-tags span:hover {
+    background: #00f5ff;
+    color: black;
+    transform: translateY(-3px);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #9f00ff;
+}
+
+.tech-stack {
+    margin-top: 12px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #00f5ff;
+}
+
+.demo-btn {
+    background: #00f5ff;
+    color: black !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* ================= CERTIFICATIONS ================= */
+
+.cert-list {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.cert-list li {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.cert-list a {
+    text-decoration: none;
+    color: white;   /* Neon green */
+    transition: 0.3s ease;
+}
+
+.cert-list a:hover {
+    color: #00f5ff;   /* Cyan hover */
+}
+
+
+
+/* ================= CONTACT ================= */
+
+#contact {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #1f2937;
+    color: white;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #00f5ff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #9f00ff;
+    color: white;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    font-size: 32px;
+    color: #00f5ff;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-6px);
+    color: #9f00ff;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111827;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-right {
+        margin-top: 40px;
+    }
+
+    .profile-img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .hero-left p {
+        margin: 20px auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background: #111827;
+        width: 200px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
